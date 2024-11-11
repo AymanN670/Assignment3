@@ -90,7 +90,7 @@ router.post('/edit/:id',async(req, res,next) => {
         let id=req.params.id;
         let updatedBook = Book({
             "_id":id, 
-            "PetName":req.body.PetName,
+            "Pet Name":req.body.PetName,
             "Age":req.body.Age,
             "Breed":req.body.PetBreed,
             "Description":req.body.Description,
