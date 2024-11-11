@@ -2,7 +2,7 @@
 let mongoose = require('mongoose')
 // create a model class
 let bookModel = mongoose.Schema({
-    Name:String,
+    PetName:String,
     Author:String,
     Published:String,
     Description:String,
