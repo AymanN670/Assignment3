@@ -47,10 +47,10 @@ router.post('/add', async(req, res,next) => {
         /* change this up for the assignment or project */
         let newBook = Book({
             "Pet Name": req.body.PetName,
-            "Age": req.body.PetAge,
-            "Breed": req.body.PetBreed,
-            "Description": req.body.PetDescription,
-            "Price": req.body.PetPrice
+            "Age": req.body.Age,
+            "Breed": req.body.Breed,
+            "Description": req.body.Description,
+            "Price": req.body.Price
         });
         Book.create(newBook).then(()=> {
             res.redirect('/bookslist');
@@ -91,10 +91,10 @@ router.post('/edit/:id',async(req, res,next) => {
         let updatedBook = Book({
             "_id":id, 
             "Pet Name":req.body.PetName,
-            "Age":req.body.PetAge,
+            "Age":req.body.Age,
             "Breed":req.body.PetBreed,
-            "Description":req.body.PetDescription,
-            "Price":req.body.PetPrice
+            "Description":req.body.Description,
+            "Price":req.body.Price
         })
         Book.findByIdAndUpdate(id, updatedBook).then(()=>{
             res.redirect('/bookslist')
