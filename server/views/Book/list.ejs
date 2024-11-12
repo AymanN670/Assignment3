@@ -6,22 +6,22 @@
             <h1><%= title %></h1>
             <br>
             <a href="/bookslist/add" class="btn btn-primary" role="button">
-                <i class="fas fa-plus-circle"></i> Add Book
+                <i class="fas fa-plus-circle"></i> Add Pet Information
             </a>
         <table class="table table-bordered table-striped table-hover">
             <!--Table Header-->
             <tr class="d-flex">
-                <th class="text-center col-2">Name</th>
-                <th class="text-center col-2">Author</th>
-                <th class="text-center col-2">Published</th>
+                <th class="text-center col-2">Pet Name</th>
+                <th class="text-center col-2">Age</th>
+                <th class="text-center col-2">Breed</th>
                 <th class="col-5">Description</th>
                 <th class="text-center col-1">Price</th>
             </tr>
             <% for(let count=0;count<BookList.length;count++) { %>
             <tr class="d-flex">
-                <td class="text-center col-2"><%= BookList[count].Name %></td>
-                <td class="text-center col-2"><%= BookList[count].Author %></td>
-                <td class="text-center col-2"><%= BookList[count].Published %></td>
+                <td class="text-center col-2"><%= BookList[count].PetName %></td>
+                <td class="text-center col-2"><%= BookList[count].Age %></td>
+                <td class="text-center col-2"><%= BookList[count].Breed %></td>
                 <td class="col-5"><%= BookList[count].Description %></td>
                 <td class="text-center col-1"><%= BookList[count].Price %></td>
                 <td class="text-center col-2"> 
