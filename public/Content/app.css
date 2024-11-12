@@ -1,0 +1,98 @@
+body {
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    background:linear-gradient(to bottom, lightpink, rgb(247, 154, 169)) ;
+    background-origin:white;
+    text-align: center;
+}
+.container {
+    background-color: #fce4ec; 
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+
+h1 {
+    color: #ec407a; /* Pink color for the title */
+    font-family: 'Times New Roman', sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form {
+    background-color: #ffffff; /* White background for the form */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #f06292; /* Light pink border */
+    padding: 10px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #ec407a; /* Darker pink border on focus */
+    box-shadow: 0 0 8px rgba(236, 64, 122, 0.3); /* Pink shadow on focus */
+}
+
+
+label {
+    font-weight: bold;
+    color: #ec407a; /* Pink color for labels */
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+/* Button styling */
+button {
+    width: 48%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/*Submit button */
+button.btn-primary {
+    background-color: #ec407a; /* Pink background */
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button.btn-primary:hover {
+    background-color: #d81b60; /* Darker pink on hover */
+}
+
+/* Cancel  button */
+button.btn-warning {
+    background-color: #f06292; /* Lighter pink background */
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button.btn-warning:hover {
+    background-color: #e91e63; /* Darker pink on hover */
+}
+
+/* Text area styling */
+textarea.form-control {
+    resize: vertical;
+    min-height: 120px;
+}
+
+body {
+    background-color: #f3e5f5; /* Very light pink background for the body */
+    font-family: 'Times New Roman', sans-serif;
+    padding: 20px;
+}
