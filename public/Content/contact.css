@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+body {
+    background-color: #f3e5f5;
+}
+
+.contact-title {
+    color: #ec407a;
+    text-align: center;
+    font-size: 33px;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#wrapper {
+    font-family: 'Times New Roman', Times, serif;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #fce4ec;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
