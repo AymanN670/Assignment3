@@ -17,7 +17,7 @@ router.get('/',async(req,res,next)=>{
     try{
         const BookList = await Book.find();
         res.render('Book/list',{
-            title:'Books',
+            title:'Pet Shop Information',
             BookList:BookList
         })
     }
@@ -31,7 +31,7 @@ router.get('/',async(req,res,next)=>{
 router.get('/add', async(req, res,next) => {
     try {
         res.render('Book/add',{
-            title: 'Add Book'
+            title: 'Add Pet Information'
         });
     }
     catch(err)
@@ -46,7 +46,7 @@ router.post('/add', async(req, res,next) => {
     try {
         /* change this up for the assignment or project */
         let newBook = Book({
-            "Pet Name": req.body.PetName,
+            "PetName": req.body.PetName,
             "Age": req.body.Age,
             "Breed": req.body.Breed,
             "Description": req.body.Description,
@@ -72,7 +72,7 @@ router.get('/edit/:id',async(req, res,next) => {
         const bookToEdit = await Book.findById(id);
         res.render('Book/edit',
             {
-                title: 'Edit Book',
+                title: 'Edit Pet Information',
                 Book:bookToEdit
             }
         )
@@ -90,9 +90,9 @@ router.post('/edit/:id',async(req, res,next) => {
         let id=req.params.id;
         let updatedBook = Book({
             "_id":id, 
-            "Pet Name":req.body.PetName,
+            "PetName":req.body.PetName,
             "Age":req.body.Age,
-            "Breed":req.body.PetBreed,
+            "Breed":req.body.Breed,
             "Description":req.body.Description,
             "Price":req.body.Price
         })
