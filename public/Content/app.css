@@ -1,42 +1,27 @@
 .container {
     background-color: #fce4ec;  /* Light pink background for the container */
-    padding: 30px;  /* Padding inside the container for spacing */
+    padding: 150px;  /* Padding inside the container for spacing */
     border-radius: 8px;  /* Rounded corners for the container */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Soft shadow for depth */
     margin-top: 20px;  /* Space between the container and other elements above */
 }
 
 h1 {
-    color: #ec407a;  /* Bright pink color for the heading */
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
     text-align: center;  /* Centers the heading text */
-    margin-bottom: 30px;  /* Adds space below the heading */
 }
 
 .form {
-    background-color: #fce4ec;  /* Light pink background for the form */
+    background-color: #fdeef4; /* Light pink background for the form */
     padding: 25px;  /* Padding inside the form for spacing */
     border-radius: 8px;  /* Rounded corners for the form */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Soft shadow for depth */
-}
-
-.form-control {
-    border-radius: 5px;  /* Slightly rounded corners for input fields */
-    border: 1px solid #f06292;  /* Light pink border */
-    padding: 10px;  /* Padding inside input fields */
-    margin-bottom: 20px;  /* Space below input fields */
-    transition: all 0.3s ease;  /* Smooth transition on focus */
-}
-
-/* Changes border color and adds a shadow */
-.form-control:focus {
-    border-color: #ec407a;  /* Darker pink border when focused */
-    box-shadow: 0 0 8px rgba(236, 64, 122, 0.3);  /* Light shadow around focused field */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);  /* Soft shadow for depth */
 }
 
 /* Label styling: Bold text and color */
 label {
     font-weight: bold;  /* Makes labels bold */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #ec407a;  /* Pink color for labels */
     margin-bottom: 5px;  /* Space below the label */
     display: inline-block;  /* Makes label behave like a block-level element */
@@ -77,7 +62,3 @@ button.btn-warning:hover {
     background-color: #e91e63;  /* Darker pink on hover */
 }
 
-textarea.form-control {
-    resize: vertical;  /* Allows the user to resize the textarea vertically */
-    min-height: 120px;  /* Sets a minimum height for the textarea */
-}
