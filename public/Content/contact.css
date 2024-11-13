@@ -1,23 +1,27 @@
+/* Set the character encoding for the stylesheet */
 @charset "UTF-8";
 
+/* Style for the body of the page */
 body {
-    background-color: #f3e5f5;
+    background-color: #f3e5f5; /* Light pink background color */
 }
 
+/* Style for the contact title element */
 .contact-title {
-    color: #f06292;
-    text-align: center;
-    font-size: 33px;
-    margin-bottom: 20px;
-    font-family: 'Times New Roman', Times, serif;
+    color: #f06292; /* Pinkish color for the text */
+    text-align: center; /* Center-align the text */
+    font-size: 33px; /* Set font size */
+    margin-bottom: 20px; /* Add space below the title */
+    font-family: 'Times New Roman', Times, serif; /* Use serif font */
 }
 
+/* Wrapper style for the content container */
 #wrapper {
-    font-family: 'Times New Roman', Times, serif;
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 30px;
-    background-color: #fce4ec;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Times New Roman', Times, serif; /* Set the font for the wrapper */
+    max-width: 600px; 
+    margin: 20px auto; 
+    padding: 30px; 
+    background-color: #fce4ec; /* Light pink background for the wrapper */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow around the wrapper */
 }
