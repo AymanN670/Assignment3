@@ -3,12 +3,12 @@
 
 /* Style for the body of the page */
 body {
-    background-color: #f3e5f5; /* Light pink background color */
+    background-color: #f3e5f5; /* Light purple background color */
 }
 
 /* Style for the contact title element */
 .contact-title {
-    color: #f06292; /* Pinkish color for the text */
+    color: #000000; /* Black color for the text */
     text-align: center; /* Center-align the text */
     font-size: 33px; /* Set font size */
     margin-bottom: 20px; /* Add space below the title */
