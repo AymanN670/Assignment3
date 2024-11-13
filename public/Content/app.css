@@ -1,85 +1,90 @@
 body {
-    font-size: large;
-    font-family: 'Times New Roman', Times, serif;
-    background-color: #f3e5f5;
-    text-align: center;
+    font-size: large;  /* Large font size for readability */
+    font-family: 'Times New Roman', Times, serif;  
+    background-color: #f3e5f5;  
+    text-align: center;  /* Center align text */
 }
 
 .container {
-    background-color: #fce4ec;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    background-color: #fce4ec;  /* Light pink background for the container */
+    padding: 30px;  /* Padding inside the container for spacing */
+    border-radius: 8px;  /* Rounded corners for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Soft shadow for depth */
+    margin-top: 20px;  /* Space between the container and other elements above */
 }
 
 h1 {
-    color: #ec407a;
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-    margin-bottom: 30px;
+    color: #ec407a;  /* Bright pink color for the heading */
+    font-family: 'Times New Roman', Times, serif; 
+    text-align: center;  /* Centers the heading text */
+    margin-bottom: 30px;  /* Adds space below the heading */
 }
 
 .form {
-    background-color: #ffffff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fce4ec;  /* Light pink background for the form */
+    padding: 25px;  /* Padding inside the form for spacing */
+    border-radius: 8px;  /* Rounded corners for the form */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Soft shadow for depth */
 }
 
 .form-control {
-    border-radius: 5px;
-    border: 1px solid #f06292;
-    padding: 10px;
-    margin-bottom: 20px;
-    transition: all 0.3s ease;
+    border-radius: 5px;  /* Slightly rounded corners for input fields */
+    border: 1px solid #f06292;  /* Light pink border */
+    padding: 10px;  /* Padding inside input fields */
+    margin-bottom: 20px;  /* Space below input fields */
+    transition: all 0.3s ease;  /* Smooth transition on focus */
 }
 
+/* Changes border color and adds a shadow */
 .form-control:focus {
-    border-color: #ec407a;
-    box-shadow: 0 0 8px rgba(236, 64, 122, 0.3);
+    border-color: #ec407a;  /* Darker pink border when focused */
+    box-shadow: 0 0 8px rgba(236, 64, 122, 0.3);  /* Light shadow around focused field */
 }
 
+/* Label styling: Bold text and color */
 label {
-    font-weight: bold;
-    color: #ec407a;
-    margin-bottom: 5px;
-    display: inline-block;
+    font-weight: bold;  /* Makes labels bold */
+    color: #ec407a;  /* Pink color for labels */
+    margin-bottom: 5px;  /* Space below the label */
+    display: inline-block;  /* Makes label behave like a block-level element */
 }
 
 button {
-    width: 48%;
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
+    width: 48%; 
+    padding: 12px;  
+    font-size: 16px;  
+    border-radius: 5px;  
+    cursor: pointer;  
+    display: inline-block; 
+    text-align: center;  /* Centers text inside the button */
+    margin-top: 10px;  /* Adds space above the button */
+    transition: background-color 0.3s ease;  /* Smooth transition for background color */
 }
 
 button.btn-primary {
-    background-color: #ec407a;
-    color: white;
-    border: none;
+    background-color: #ec407a;  /* Pink background */
+    color: white;  /* White text */
+    border: none;  /* No border */
 }
 
+/* Hover effect for primary button: Darker pink background */
 button.btn-primary:hover {
-    background-color: #d81b60;
+    background-color: #d81b60;  /* Darker pink when hovered */
 }
 
+/* Warning button: Lighter pink background with white text */
 button.btn-warning {
-    background-color: #f06292;
-    color: white;
-    border: none;
+    background-color: #f06292;  /* Lighter pink background */
+    color: white;  /* White text */
+    border: none;  /* No border */
 }
 
+/* Hover effect for warning button: Slightly darker pink background */
 button.btn-warning:hover {
-    background-color: #e91e63;
+    background-color: #e91e63;  /* Darker pink on hover */
 }
 
 textarea.form-control {
-    resize: vertical;
-    min-height: 120px;
+    resize: vertical;  /* Allows the user to resize the textarea vertically */
+    min-height: 120px;  /* Sets a minimum height for the textarea */
 }
