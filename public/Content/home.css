@@ -4,6 +4,8 @@ body {
 
 /* Style for the h1 element */
 h1 {
+    /* adding a top margin of 400px to the element */
+    margin-top: 400px; 
     margin-left: 400px; /* Move the h1 element 400px from the left */
     color: black; /* Set text color to black */
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
