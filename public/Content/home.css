@@ -1,10 +1,10 @@
 body {
-    background-color: #f3e5f5
-    
+    background-color: #f3e5f5; /* Set a light pink background color */
 }
 
+/* Style for the h1 element */
 h1 {
-    margin-left: 400px;
-    color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 400px; /* Move the h1 element 400px from the left */
+    color: black; /* Set text color to black */
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
 }
