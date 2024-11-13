@@ -17,6 +17,7 @@ body {
 
 /* Wrapper style for the content container */
 #wrapper {
+    font-weight: bold;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Set the font for the wrapper */
     max-width: 600px; 
     margin: 20px auto; 
