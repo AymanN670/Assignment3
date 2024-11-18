@@ -16,15 +16,15 @@ router.get('/home', function(req, res, next) {
 });
 /* GET about us page. */
 router.get('/aboutus', function(req, res, next) {
-  res.render('index', { title: 'About Us' });
+  res.render('Pages/about', { title: 'About Us' });
 });
 /* GET Product page. */
 router.get('/product', function(req, res, next) {
-  res.render('index', { title: 'Product' });
+  res.render('Pages/products', { title: 'Product' });
 });
 /* GET Services page. */
 router.get('/service', function(req, res, next) {
-  res.render('index', { title: 'Service' });
+  res.render('Pages/services', { title: 'Service' });
 });
 /* GET contact me page. */
 router.get('/contactus', function(req, res, next) {
