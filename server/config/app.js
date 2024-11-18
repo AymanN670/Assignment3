@@ -4,26 +4,54 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
+let session = require('express-session');
+let passport = require('passport');
+let passportLocal = require('passport-local');
+let flash = require('connect-flash');
+let app = express();
+
+let cors = require('cors');
+let userModel = require('../model/User');
+let User = userModel.User;
+
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
-let bookRouter = require('../routes/book')
+let bookRouter = require('../routes/book');
 
-let app = express();
-let mongoose = require('mongoose');
-let DB = require('./db');
-// point my mongoose to the URI
-mongoose.connect(DB.URI);
-let mongoDB = mongoose.connection;
-mongoDB.on('error',console.error.bind(console,'Connection Error'))
-mongoDB.once('open',()=>{
-  console.log('MongoDB Connected')
-})
-mongoose.connect(DB.URI,{useNewURIParser:true,
-  useUnifiedTopology:true
-})
 // view engine setup
 app.set('views', path.join(__dirname, '../views'));
 app.set('view engine', 'ejs');
+
+let mongoose = require('mongoose');
+let DB = require('./db');
+
+// MongoDB Connection
+mongoose.connect(DB.URI);
+let mongoDB = mongoose.connection;
+mongoDB.on('error', console.error.bind(console, 'Connection Error'));
+mongoDB.once('open', () => {
+  console.log('MongoDB Connected');
+});
+
+// Set up express-session
+app.use(
+  session({
+    secret: 'SomeSecret',
+    saveUninitialized: false,
+    resave: false,
+  })
+);
+
+// Initialize flash
+app.use(flash());
+
+// Serialize and deserialize the user information
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+// Initialize passport
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -31,13 +59,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../public')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/bookslist',bookRouter);
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
+app.use('/bookslist', bookRouter);
 
 // error handler
 app.use(function(err, req, res, next) {
