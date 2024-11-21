@@ -13,7 +13,7 @@ Put --> Edit/Update
 /* Read operation --> Get route for displaying the books list*/
 
 
-router.get('/',async(req,res,next)=>{
+router.get(';',async(req,res,next)=>{
     try{
         const BookList = await Book.find();
         res.render('Book/list',{
