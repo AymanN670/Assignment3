@@ -78,7 +78,7 @@ router.post('/login', function(req, res, next){
       {
         return next(err)
       }
-      return res.redirect('/bookslist')
+      return res.redirect('/movieslist')
     })
   }) (req, res, next)
 })
@@ -122,7 +122,7 @@ router.post('/register', function(req, res, next){
     else
     {
       return passport.authenticate('local')(req,  res, ()=>{
-        res.redirect('/bookslist')
+        res.redirect('/movieslist')
       })
     }
 

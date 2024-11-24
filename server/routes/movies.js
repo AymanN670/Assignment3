@@ -1,37 +1,37 @@
 var express = require('express');
 var router = express.Router();
-let Book = require('../model/book')
-const book = require('../model/book');
-let bookController = require('../controllers/book.js')
-/* Get route for the book list - Read Operation */
+let Movies = require('../model/movies')
+const movies = require('../model/movies');
+let moviesController = require('../controllers/movies.js')
+/* Get route for the movies list - Read Operation */
 /*
 GET, 
 Post, 
 Put --> Edit/Update
 */
 
-/* Read operation --> Get route for displaying the books list*/
+/* Read operation --> Get route for displaying the movies list*/
 
 
 router.get('/',async(req,res,next)=>{
     try{
-        const BookList = await Book.find();
-        res.render('Book/list',{
+        const MoviesList = await Movies.find();
+        res.render('Movies/list',{
             title:'Pet Shop Information',
             displayName: req.user ? req.user.displayName: '',
-            BookList:BookList
+            MoviesList:MoviesList
         })
     }
     catch(err){
         console.error(err)
-        res.render('Book/list',{
+        res.render('Movies/list',{
             error:'Error on Server'})
     }
 })
 /* Create operation --> Get route for displaying the Add Page */
 router.get('/add', async(req, res,next) => {
     try {
-        res.render('Book/add',{
+        res.render('Movies/add',{
             title: 'Add Pet Information',
             displayName: req.user ? req.user.displayName: ''
         });
@@ -39,7 +39,7 @@ router.get('/add', async(req, res,next) => {
     catch(err)
     {
         console.error(err)
-        res.render('Book/list',{
+        res.render('Movies/list',{
             error:'Error on Server'})
     }
 });
@@ -47,22 +47,22 @@ router.get('/add', async(req, res,next) => {
 router.post('/add', async(req, res,next) => {
     try {
         /* change this up for the assignment or project */
-        let newBook = Book({
+        let newMovie = Movies({
             "PetName": req.body.PetName,
             "Age": req.body.Age,
             "Breed": req.body.Breed,
             "Description": req.body.Description,
             "Price": req.body.Price
         });
-        Book.create(newBook).then(()=> {
-            res.redirect('/bookslist');
+        Movies.create(newMovie).then(()=> {
+            res.redirect('/movieslist');
         })
 
     }
     catch(err)
     {
         console.error(err)
-        res.render('Book/list',{
+        res.render('Movies/list',{
             error:'Error on Server'})
     }
 });
@@ -71,12 +71,12 @@ router.get('/edit/:id',async(req, res,next) => {
     try {
 
         const id = req.params.id;
-        const bookToEdit = await Book.findById(id);
-        res.render('Book/edit',
+        const moviesToEdit = await Movies.findById(id);
+        res.render('Movies/edit',
             {
                 title: 'Edit Pet Information',
                 displayName: req.user ? req.user.displayName: '',
-                Book:bookToEdit
+                Movies:moviesToEdit
             }
         )
 
@@ -91,7 +91,7 @@ router.get('/edit/:id',async(req, res,next) => {
 router.post('/edit/:id',async(req, res,next) => {
     try {
         let id=req.params.id;
-        let updatedBook = Book({
+        let updatedMovie = Movies({
             "_id":id, 
             "PetName":req.body.PetName,
             "Age":req.body.Age,
@@ -99,15 +99,15 @@ router.post('/edit/:id',async(req, res,next) => {
             "Description":req.body.Description,
             "Price":req.body.Price
         })
-        Book.findByIdAndUpdate(id, updatedBook).then(()=>{
-            res.redirect('/bookslist')
+        Movies.findByIdAndUpdate(id, updatedMovie).then(()=>{
+            res.redirect('/movieslist')
         })
     }
 
     catch(err)
     {
         console.error(err)
-        res.render('Book/list',{
+        res.render('Movies/list',{
             error:'Error on Server'})
     }
 });
@@ -115,13 +115,13 @@ router.post('/edit/:id',async(req, res,next) => {
 router.get('/delete/:id',async(req, res, next) => {
     try{
         let id=req.params.id;
-        Book.deleteOne({_id:id}).then(()=>{
-            res.redirect('/bookslist')
+        Movies.deleteOne({_id:id}).then(()=>{
+            res.redirect('/movieslist')
         })
     }
     catch(err){
         console.error(err)
-        res.render('Book/list',{
+        res.render('Movies/list',{
             error:'Error on Server'})
     }
 });

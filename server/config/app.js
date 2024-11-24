@@ -22,7 +22,7 @@ passport.deserializeUser(User.deserializeUser());
 // Define routes
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
-let bookRouter = require('../routes/book');
+let moviesRouter = require('../routes/movies');
 
 // MongoDB connection
 let DB = require('./db');
@@ -62,7 +62,7 @@ app.use(express.static(path.join(__dirname, '../../node_modules')));
 // Routes
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/bookslist', bookRouter);
+app.use('/movieslist', moviesRouter);
 
 // Error handler
 app.use(function (err, req, res, next) {

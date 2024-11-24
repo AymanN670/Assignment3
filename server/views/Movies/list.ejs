@@ -6,7 +6,7 @@
             <h1><%= title %></h1>
             <br>
             <% if(typeof displayName=='string' && displayName) {%>
-             <a href="/bookslist/add" class="btn btn-primary" role="button">
+             <a href="/movieslist/add" class="btn btn-primary" role="button">
                 <i class="fas fa-plus-circle"></i> Add Pet Information
             </a>
             <%}%>
@@ -36,16 +36,16 @@
             <%}%>
 
             </tr>
-            <% for(let count=0;count<BookList.length;count++) { %>
+            <% for(let count=0;count<MoviesList.length;count++) { %>
             <tr class="d-flex">
             <% if(typeof displayName=='string' && displayName) {%>
-                <td class="text-center col-2"><%= BookList[count].PetName %></td>
-                <td class="text-center col-2"><%= BookList[count].Age %></td>
-                <td class="text-center col-2"><%= BookList[count].Breed %></td>
-                <td class="col-5"><%= BookList[count].Description %></td>
-                <td class="text-center col-1"><%= BookList[count].Price %></td>
+                <td class="text-center col-2"><%= MoviesList[count].PetName %></td>
+                <td class="text-center col-2"><%= MoviesList[count].Age %></td>
+                <td class="text-center col-2"><%= MoviesList[count].Breed %></td>
+                <td class="col-5"><%= MoviesList[count].Description %></td>
+                <td class="text-center col-1"><%= MoviesList[count].Price %></td>
                 <td class="text-center col-1"> 
-                    <a href="/bookslist/edit/<%= BookList[count]._id%>"
+                    <a href="/movieslist/edit/<%= MoviesList[count]._id%>"
                         class="btn btn-primary btn-sm">
                     <i class="fas fa-pencil-alt"></i>Edit 
 
@@ -53,18 +53,18 @@
                     </td>
 
                 <td class="text-center col-1"> 
-                    <a href="/bookslist/delete/<%= BookList[count]._id%>"
+                    <a href="/movieslist/delete/<%= MoviesList[count]._id%>"
                         class="btn btn-danger btn-sm">
                     <i class="fas fa-trash-alt"></i>Delete
 
                     </a>
                     </td>
                     <% } else { %>
-                    <td class="text-center col-2"><%= BookList[count].PetName %></td>
-                    <td class="text-center col-2"><%= BookList[count].Age %></td>
-                    <td class="text-center col-2"><%= BookList[count].Breed %></td>
-                    <td class="col-5"><%= BookList[count].Description %></td>
-                    <td class="text-center col-1"><%= BookList[count].Price %></td>
+                    <td class="text-center col-2"><%= MoviesList[count].PetName %></td>
+                    <td class="text-center col-2"><%= MoviesList[count].Age %></td>
+                    <td class="text-center col-2"><%= MoviesList[count].Breed %></td>
+                    <td class="col-5"><%= MoviesList[count].Description %></td>
+                    <td class="text-center col-1"><%= MoviesList[count].Price %></td>
                     <% } %>
 
             </tr>
