@@ -7,7 +7,7 @@
             <br>
             <% if(typeof displayName=='string' && displayName) {%>
              <a href="/movieslist/add" class="btn btn-primary" role="button">
-                <i class="fas fa-plus-circle"></i> Add Pet Information
+                <i class="fas fa-plus-circle"></i> Add to watch list
             </a>
             <%}%>
         <table class="table table-bordered table-striped table-hover">
@@ -19,19 +19,19 @@
             <!--Table Header-->
             <tr class="d-flex">
             <% if(typeof displayName=='string' && displayName) {%>
-                <th class="text-center col-2">Title</th>
+                <th class="text-center col-5">Title</th>
                 <th class="text-center col-2">Genre</th>
                 <th class="text-center col-2">releaseYear</th>
-                <th class="col-5">Progress</th>
-                <th class="text-center col-1">Status</th>
-                <th class="text-center col-1">Edit</th>
-                <th class="text-center col-1">Delete</th>
+                <th class="col-3">Progress</th>
+                <th class="text-center col-2">Status</th>
+                <th class="text-center col-2">Edit</th>
+                <th class="text-center col-2">Delete</th>
             <% } else { %>
-            <th class="text-center col-2">Title</th>
+            <th class="text-center col-3">Title</th>
                 <th class="text-center col-2">Genre</th>
-                <th class="text-center col-2">releaseYear</th>
-                <th class="col-5">Progress</th>
-                <th class="text-center col-1">Status</th>
+                <th class="text-center col-1">releaseYear</th>
+                <th class="col-3">Progress</th>
+                <th class="text-center col-2">Status</th>
 
             <%}%>
 
@@ -39,12 +39,12 @@
             <% for(let count=0;count<MoviesList.length;count++) { %>
             <tr class="d-flex">
             <% if(typeof displayName=='string' && displayName) {%>
-                <td class="text-center col-2"><%= MoviesList[count].Title %></td>
+                <td class="text-center col-5"><%= MoviesList[count].Title %></td>
                 <td class="text-center col-2"><%= MoviesList[count].Genre %></td>
                 <td class="text-center col-2"><%= MoviesList[count].releaseYear %></td>
-                <td class="col-5"><%= MoviesList[count].Progress %></td>
-                <td class="text-center col-1"><%= MoviesList[count].Status %></td>
-                <td class="text-center col-1"> 
+                <td class="col-3"><%= MoviesList[count].Progress %></td>
+                <td class="text-center col-2"><%= MoviesList[count].Status %></td>
+                <td class="text-center col-2"> 
                     <a href="/movieslist/edit/<%= MoviesList[count]._id%>"
                         class="btn btn-primary btn-sm">
                     <i class="fas fa-pencil-alt"></i>Edit 
@@ -52,7 +52,7 @@
                     </a>
                     </td>
 
-                <td class="text-center col-1"> 
+                <td class="text-center col-2"> 
                     <a href="/movieslist/delete/<%= MoviesList[count]._id%>"
                         class="btn btn-danger btn-sm">
                     <i class="fas fa-trash-alt"></i>Delete
@@ -60,11 +60,11 @@
                     </a>
                     </td>
                     <% } else { %>
-                    <td class="text-center col-2"><%= MoviesList[count].Title %></td>
+                    <td class="text-center col-5"><%= MoviesList[count].Title %></td>
                     <td class="text-center col-2"><%= MoviesList[count].Genre %></td>
                     <td class="text-center col-2"><%= MoviesList[count].releaseYear %></td>
-                    <td class="col-5"><%= MoviesList[count].Progress %></td>
-                    <td class="text-center col-1"><%= MoviesList[count].Status %></td>
+                    <td class="col-3"><%= MoviesList[count].Progress %></td>
+                    <td class="text-center col-2"><%= MoviesList[count].Status %></td>
                     <% } %>
 
             </tr>
