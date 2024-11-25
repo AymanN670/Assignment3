@@ -1,4 +1,57 @@
+/* General Styles */
 body {
-    background-color: #f3e5f5
-    
+    background-color: maroon;
+    font-family: Arial, sans-serif;
+    color: white;
 }
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+h1 {
+    color: #ec407a;
+    font-family: 'Verdana', sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Feature Box Styling */
+.feature-box {
+    background-color: #f3e5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box i {
+    color: #ec407a;
+}
+
+.feature-box h4 {
+    color: #d81b60;
+    font-size: 1.25rem;
+    margin-top: 15px;
+}
+
+.feature-box p {
+    color: #555;
+}
+
+/* Button Styling */
+.btn-success {
+    background-color: #43a047;
+    color: white;
+    border-radius: 5px;
+    padding: 12px 20px;
+    text-transform: uppercase;
+}
+
+.btn-success:hover {
+    background-color: #388e3c;
+}
+

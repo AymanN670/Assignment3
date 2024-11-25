@@ -30,12 +30,7 @@ router.get('/product', function(req, res, next) {
     displayName: req.user ? req.user.displayName: '' 
   });
 });
-/* GET Services page. */
-router.get('/service', function(req, res, next) {
-  res.render('Pages/services', { title: 'Service' ,
-    displayName: req.user ? req.user.displayName: '' 
-  });
-});
+
 /* GET contact me page. */
 router.get('/contactus', function(req, res, next) {
   res.render('Pages/contact', { title: 'Contact us' ,
