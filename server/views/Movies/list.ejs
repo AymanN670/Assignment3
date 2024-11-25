@@ -19,19 +19,19 @@
             <!--Table Header-->
             <tr class="d-flex">
             <% if(typeof displayName=='string' && displayName) {%>
-                <th class="text-center col-2">PetName</th>
-                <th class="text-center col-2">Age</th>
-                <th class="text-center col-2">Breed</th>
-                <th class="col-5">Description</th>
-                <th class="text-center col-1">Price</th>
+                <th class="text-center col-2">Title</th>
+                <th class="text-center col-2">Genre</th>
+                <th class="text-center col-2">releaseYear</th>
+                <th class="col-5">Progress</th>
+                <th class="text-center col-1">Status</th>
                 <th class="text-center col-1">Edit</th>
                 <th class="text-center col-1">Delete</th>
             <% } else { %>
-            <th class="text-center col-2">PetName</th>
-                <th class="text-center col-2">Age</th>
-                <th class="text-center col-2">Breed</th>
-                <th class="col-5">Description</th>
-                <th class="text-center col-1">Price</th>
+            <th class="text-center col-2">Title</th>
+                <th class="text-center col-2">Genre</th>
+                <th class="text-center col-2">releaseYear</th>
+                <th class="col-5">Progress</th>
+                <th class="text-center col-1">Status</th>
 
             <%}%>
 
@@ -39,11 +39,11 @@
             <% for(let count=0;count<MoviesList.length;count++) { %>
             <tr class="d-flex">
             <% if(typeof displayName=='string' && displayName) {%>
-                <td class="text-center col-2"><%= MoviesList[count].PetName %></td>
-                <td class="text-center col-2"><%= MoviesList[count].Age %></td>
-                <td class="text-center col-2"><%= MoviesList[count].Breed %></td>
-                <td class="col-5"><%= MoviesList[count].Description %></td>
-                <td class="text-center col-1"><%= MoviesList[count].Price %></td>
+                <td class="text-center col-2"><%= MoviesList[count].Title %></td>
+                <td class="text-center col-2"><%= MoviesList[count].Genre %></td>
+                <td class="text-center col-2"><%= MoviesList[count].releaseYear %></td>
+                <td class="col-5"><%= MoviesList[count].Progress %></td>
+                <td class="text-center col-1"><%= MoviesList[count].Status %></td>
                 <td class="text-center col-1"> 
                     <a href="/movieslist/edit/<%= MoviesList[count]._id%>"
                         class="btn btn-primary btn-sm">
@@ -60,11 +60,11 @@
                     </a>
                     </td>
                     <% } else { %>
-                    <td class="text-center col-2"><%= MoviesList[count].PetName %></td>
-                    <td class="text-center col-2"><%= MoviesList[count].Age %></td>
-                    <td class="text-center col-2"><%= MoviesList[count].Breed %></td>
-                    <td class="col-5"><%= MoviesList[count].Description %></td>
-                    <td class="text-center col-1"><%= MoviesList[count].Price %></td>
+                    <td class="text-center col-2"><%= MoviesList[count].Title %></td>
+                    <td class="text-center col-2"><%= MoviesList[count].Genre %></td>
+                    <td class="text-center col-2"><%= MoviesList[count].releaseYear %></td>
+                    <td class="col-5"><%= MoviesList[count].Progress %></td>
+                    <td class="text-center col-1"><%= MoviesList[count].Status %></td>
                     <% } %>
 
             </tr>

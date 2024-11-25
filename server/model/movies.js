@@ -2,14 +2,14 @@
 let mongoose = require('mongoose')
 // create a model class
 let moviesModel = mongoose.Schema({
-    PetName:String,
-    Age: String,
-    Breed:String,
-    Description:String,
-    Price: Number
+    Title:String,
+    Genre: String,
+    releaseYear:Number,
+    Progress:String,
+    Status:String
 },
 {
-    collection:"Bio_books"
+    collection:"movies"
 }
 )
 module.exports = mongoose.model('Movies', moviesModel)

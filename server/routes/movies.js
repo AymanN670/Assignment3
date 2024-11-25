@@ -48,11 +48,11 @@ router.post('/add', async(req, res,next) => {
     try {
         /* change this up for the assignment or project */
         let newMovie = Movies({
-            "PetName": req.body.PetName,
-            "Age": req.body.Age,
-            "Breed": req.body.Breed,
-            "Description": req.body.Description,
-            "Price": req.body.Price
+            "Title": req.body.Title,
+            "Genre": req.body.Genre,
+            "releaseYear": req.body.releaseYear,
+            "Progress": req.body.Progress,
+            "Status": req.body.Status
         });
         Movies.create(newMovie).then(()=> {
             res.redirect('/movieslist');
@@ -93,11 +93,11 @@ router.post('/edit/:id',async(req, res,next) => {
         let id=req.params.id;
         let updatedMovie = Movies({
             "_id":id, 
-            "PetName":req.body.PetName,
-            "Age":req.body.Age,
-            "Breed":req.body.Breed,
-            "Description":req.body.Description,
-            "Price":req.body.Price
+            "Title":req.body.Title,
+            "Genre":req.body.Genre,
+            "releaseYear":req.body.releaseYear,
+            "Progress":req.body.Progress,
+            "Status":req.body.Status
         })
         Movies.findByIdAndUpdate(id, updatedMovie).then(()=>{
             res.redirect('/movieslist')

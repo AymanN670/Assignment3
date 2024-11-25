@@ -11,25 +11,24 @@
         <form class="form" method="POST">
         <!-- to add the name in the database -->
             <div class="form-group">
-                <label for="nameTextField">Pet Name</label>
-                <input type="text" class="form-control" id="nameTextField" placeholder="Enter the pets name" name="PetName" value="<%=Movies.PetName%>" required>
+                <label for="titleTextField">Title</label>
+                <input type="text" class="form-control" id="titleTextField" placeholder="Enter the title" name="Title" value="<%=Movies.Title%>" required>
             </div>
             <div class="form-group">
-                <label for="ageTextField">Age</label>
-                <input type="text" class="form-control" id="ageTextField" placeholder="Enter the pet's age" name="Age" value="<%=Movies.Age%>" required>
+                <label for="genreTextField">Genre</label>
+                <input type="text" class="form-control" id="genreTextField" placeholder="Enter the genre" name="Genre" value="<%=Movies.Genre%>" required>
             </div>
             <div class="form-group">
-                <label for="breedTextField">Breed</label>
-                <input type="text" class="form-control" id="breedTextField" placeholder="Enter the pet's breed" name="Breed" value="<%=Movies.Breed%>" required>
+                <label for="releaseYearTextField">releaseYear</label>
+                <input type="text" class="form-control" id="releaseYearTextField" placeholder="Enter the release year of the show/movie" name="releaseYear" value="<%=Movies.releaseYear%>" required>
             </div>
             <div class="form-group">
-            <!-- it's text area because it takes more space -->
-                <label for="descriptionTextArea">Description</label>
-                <textArea type="text" class="form-control" id="descriptionTextArea" placeholder="Enter the description of the pet" name="Description" required><%=Movies.Description%></textArea>
+                <label for="progressTextField">Progress</label>
+                <input type="text" class="form-control" id="progressTextField" placeholder="Enter how much of the show/movie you've watched." name="Progress" value="<%=Movies.Progress%>" required>
             </div>
             <div class="form-group">
-                <label for="priceTextField">Price</label>
-                <input type="text" class="form-control" id="priceTextField" placeholder="Price of the pet" name="Price" value="<%=Movies.Price%>" required>
+                <label for="statusTextField">Status</label>
+                <input type="text" class="form-control" id="statusTextField" placeholder="Status of the show/movie (Completed/Ongoing/Released/Upcoming)" name="Status" value="<%=Movies.Status%>" required>
             </div>
             <button class="btn btn-primary" type="submit">Submit
             <i class="fas fa-edit"></i></button>
