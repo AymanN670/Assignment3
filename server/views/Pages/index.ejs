@@ -1,5 +1,29 @@
-<%-include ../Partials/header.ejs %>
-<%-include ../Partials/main_nav.ejs %>
-<link rel="stylesheet" type="text/css" href="Content/home.css"> 
-<h1> Welcome to The Purr-fect Place</h1>
+<%- include ../Partials/header.ejs %>
+<%- include ../Partials/main_nav.ejs %>
+
+<link rel="stylesheet" type="text/css" href="Content/home.css">
+
+
+<div class="container-fluid vh-100 d-flex flex-column justify-content-center align-items-center text-center bg-light">
+    <!-- Title -->
+    <h1 class="display-3 fw-bold mb-3">Welcome to Your Movie & TV Show Manager</h1>
+    <p class="lead mb-4 text-muted">Track your favorite movies and TV shows effortlessly.</p>
+    
+    <!-- Call to Actions -->
+    <div>
+        <a href="/movieslist" class="btn btn-primary btn-lg me-3">
+            To Your Watch List <i class="fas fa-film"></i>
+        </a>
+
+        <!-- Register Button -->
+        <a href="/register" class="btn btn-success btn-lg me-3 mb-3">
+            Register <i class="fas fa-user-plus"></i>
+        </a>
+        <!-- Login Button -->
+        <a href="/login" class="btn btn-info btn-lg mb-3">
+            Login <i class="fas fa-sign-in-alt"></i>
+        </a>
+    </div>
+</div>
+
 <%- include ../Partials/footer.ejs %>

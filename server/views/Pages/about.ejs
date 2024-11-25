@@ -1,5 +1,24 @@
-<%-include ../Partials/header.ejs %>
-<%-include ../Partials/main_nav.ejs %>
-<link rel="stylesheet" type="text/css" href="Content/about.css"> 
-<h2> This page is going to consist on information about the pet shop </h2>
+<%- include ../Partials/header.ejs %>
+<%- include ../Partials/main_nav.ejs %>
+<link rel="stylesheet" type="text/css" href="Content/about.css">
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">About Your Movie & TV Show Manager</h2>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <h3 class="fw-bold">Track Your Entertainment</h3>
+            <p>Welcome to the ultimate Movie and TV Show Manager, where you can easily track the movies and TV shows you've watched, want to watch, or are currently watching. Organize and explore your entertainment library at your fingertips.</p>
+        </div>
+        <div class="col-md-6">
+            <h3 class="fw-bold">Manage Your Favorites</h3>
+            <p>Never forget where you left off! Our system allows you to track your progress, mark shows as completed, and keep up with ongoing series and new movie releases.</p>
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <img src="/Assets/images/Movies.jpg" alt="Movies and TV Shows" />
+    </div>
+</div>
+
 <%- include ../Partials/footer.ejs %>

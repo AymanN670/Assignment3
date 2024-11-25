@@ -7,7 +7,7 @@
             <br>
             <% if(typeof displayName=='string' && displayName) {%>
              <a href="/movieslist/add" class="btn btn-primary" role="button">
-                <i class="fas fa-plus-circle"></i> Add to watch list
+                <i class="fas fa-plus-circle"></i> Add to watchlist
             </a>
             <%}%>
         <table class="table table-bordered table-striped table-hover">
@@ -27,9 +27,9 @@
                 <th class="text-center col-2">Edit</th>
                 <th class="text-center col-2">Delete</th>
             <% } else { %>
-            <th class="text-center col-3">Title</th>
-                <th class="text-center col-2">Genre</th>
-                <th class="text-center col-1">releaseYear</th>
+            <th class="text-center col-5">Title</th>
+                <th class="text-center col-4">Genre</th>
+                <th class="text-center col-5">releaseYear</th>
                 <th class="col-3">Progress</th>
                 <th class="text-center col-2">Status</th>
 
@@ -61,8 +61,8 @@
                     </td>
                     <% } else { %>
                     <td class="text-center col-5"><%= MoviesList[count].Title %></td>
-                    <td class="text-center col-2"><%= MoviesList[count].Genre %></td>
-                    <td class="text-center col-2"><%= MoviesList[count].releaseYear %></td>
+                    <td class="text-center col-4"><%= MoviesList[count].Genre %></td>
+                    <td class="text-center col-5"><%= MoviesList[count].releaseYear %></td>
                     <td class="col-3"><%= MoviesList[count].Progress %></td>
                     <td class="text-center col-2"><%= MoviesList[count].Status %></td>
                     <% } %>

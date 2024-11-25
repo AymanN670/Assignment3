@@ -1,5 +1,46 @@
-<%-include ../Partials/header.ejs %>
-<%-include ../Partials/main_nav.ejs %>
-<link rel="stylesheet" type="text/css" href="Content/products.css"> 
-<h2> This page is going to be about the animals we have etc </h2>
+<%- include ../Partials/header.ejs %>
+<%- include ../Partials/main_nav.ejs %>
+<link rel="stylesheet" type="text/css" href="Content/products.css">
+
+<!-- Features Section -->
+<div class="container mt-5">
+  <h1 class="text-center mb-5">Features of The Watch Diary</h1>
+  
+  <div class="row text-center">
+    <!-- Track Movies & TV Shows -->
+    <div class="col-md-4 mb-4">
+      <div class="feature-box p-4 border rounded shadow-sm">
+        <i class="fas fa-film fa-3x mb-3"></i>
+        <h4>Track Movies & TV Shows</h4>
+        <p>Keep track of your favorite movies and TV shows in one place. See which episodes you've watched and where to pick up next!</p>
+      </div>
+    </div>
+    <!-- Watchlist -->
+    <div class="col-md-4 mb-4">
+      <div class="feature-box p-4 border rounded shadow-sm">
+        <i class="fas fa-list-ul fa-3x mb-3"></i>
+        <h4>Personal Watchlist</h4>
+        <p>Add movies and TV shows to your watchlist to keep track of what you want to watch next. Never forget your next binge session!</p>
+      </div>
+    </div>
+    <!-- Progress Tracker -->
+    <div class="col-md-4 mb-4">
+      <div class="feature-box p-4 border rounded shadow-sm">
+        <i class="fas fa-check-circle fa-3x mb-3"></i>
+        <h4>Track Progress</h4>
+        <p>Track your viewing progress with completion percentage, so you can easily see how much you've watched and what's left. </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row text-center mt-5">
+    <div class="col-md-12">
+      <h2>Save Your Progress</h2>
+      <p>Register an account to save your progress and never lose track of your watched movies and TV shows!</p>
+      <a href="/register" class="btn btn-success btn-lg">Register Now</a>
+      <p class="mt-3">Already have an account? <a href="/login">Login</a></p>
+    </div>
+</div>
+
 <%- include ../Partials/footer.ejs %>

@@ -9,12 +9,12 @@ let User = userModel.User;
 /* GET index page. */
 router.get('/', function(req, res, next) {
   res.render('Pages/index', { 
-    title: 'The Purr-fect Place',
+    title: 'The Watch Diary',
     displayName: req.user ? req.user.displayName: '' });
 });
 /* GET home page. */
 router.get('/home', function(req, res, next) {
-  res.render('Pages/index', { title: 'The Purr-fect Place',
+  res.render('Pages/index', { title: 'The Watch Diary',
     displayName: req.user ? req.user.displayName: '' 
    });
 });

@@ -17,7 +17,7 @@ router.get('/',async(req,res,next)=>{
     try{
         const MoviesList = await Movies.find();
         res.render('Movies/list',{
-            title:'Pet Shop Information',
+            title:'TV show or movie tracker',
             displayName: req.user ? req.user.displayName: '',
             MoviesList:MoviesList
         })
@@ -32,7 +32,7 @@ router.get('/',async(req,res,next)=>{
 router.get('/add', async(req, res,next) => {
     try {
         res.render('Movies/add',{
-            title: 'Add Pet Information',
+            title: 'Add to watchlist',
             displayName: req.user ? req.user.displayName: ''
         });
     }
@@ -74,7 +74,7 @@ router.get('/edit/:id',async(req, res,next) => {
         const moviesToEdit = await Movies.findById(id);
         res.render('Movies/edit',
             {
-                title: 'Edit Pet Information',
+                title: 'Edit the information',
                 displayName: req.user ? req.user.displayName: '',
                 Movies:moviesToEdit
             }
